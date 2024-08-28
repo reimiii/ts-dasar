@@ -69,3 +69,8 @@ include exclude example in `tsconfig.json`
 }
 ```
 
+in test not error in compile error use this to watch compile
+
+```shell
+npx tsc --watch
+```
