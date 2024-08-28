@@ -1,7 +1,7 @@
 export enum CustomerType {
-    REGULAR,
-    GOLD,
-    PREMIUM
+    REGULAR = "REGULAR",
+    GOLD = "GOLD",
+    PREMIUM = "PREMIUM"
 }
 
 export type Customer = {
