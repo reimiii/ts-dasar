@@ -39,3 +39,9 @@ npm install --save-dev @jest/globals
 
 npm install --save-dev @types/jest
 ```
+
+run jest / test
+
+```shell
+npx jest
+```
