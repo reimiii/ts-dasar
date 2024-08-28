@@ -1,6 +1,6 @@
 describe('Object', () => {
     it('should support in ts', () => {
-        const person: { id: number, name: string } = {
+        const person: { id: number, name: string, hobbies?: string[]} = {
             id: 1,
             name: "Mee"
         }
