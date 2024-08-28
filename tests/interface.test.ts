@@ -26,4 +26,28 @@ describe('Interface', () => {
         expect(add(2, 2)).toBe(4);
     });
 
+    it('should support index array interface', () => {
+        interface StArr {
+            [index: number]: string;
+        }
+
+        const names: StArr = ["mee", "zee", "xee"];
+        console.info(names)
+        console.info(names[0])
+    });
+
+    it('should support index object interface', () => {
+        interface StrDi {
+            [key: string]: string;
+        }
+
+        const dictionary: StrDi = {
+            name: "Umm",
+            address: "Yeah"
+        };
+
+        console.info(dictionary["name"]);
+        console.info(dictionary["address"]);
+    });
+
 });
