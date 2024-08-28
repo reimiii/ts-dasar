@@ -1,4 +1,5 @@
 import {Seller} from "../src/seller";
+import {Employee, Manager} from "../src/employee";
 
 describe('Interface', () => {
     it('should be support in ts', () => {
@@ -50,4 +51,21 @@ describe('Interface', () => {
         console.info(dictionary["address"]);
     });
 
+    it('should support extends interface', () => {
+       const emply: Employee = {
+           id: "123",
+           name: "rahmat",
+           division: "Slamet"
+       };
+
+       const managr: Manager = {
+           id: "111",
+           name: "Haannd",
+           division: "IT",
+           numOfEmployees: 11100
+       };
+
+        console.info(emply);
+        console.info(managr);
+    });
 });
