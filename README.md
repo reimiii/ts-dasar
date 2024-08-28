@@ -56,3 +56,16 @@ npx tsc
 
 output compile in `dist/`
 
+include exclude example in `tsconfig.json`
+```json
+{
+  "include": [
+    "src/**/*",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "tests/**/*"
+  ]
+}
+```
+
