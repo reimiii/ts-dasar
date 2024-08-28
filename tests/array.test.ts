@@ -13,4 +13,9 @@ describe('Array', () => {
 
         // theName[0] = "ugh"; // error in tsc
     });
+
+    it('should support tuple', () => {
+        const person: readonly [number, string, boolean] = [1, "hilmi", true];
+        console.info(person)
+    });
 });
