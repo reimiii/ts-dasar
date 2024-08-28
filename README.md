@@ -46,4 +46,13 @@ run jest / test
 npx jest
 ```
 
+compile typescript
+
+create `dist` folder in root project dir and uncomment and change `"outDir": "./"` to `"outDir": "dist/"` and compile with
+
+```shell
+npx tsc
+```
+
+output compile in `dist/`
 
