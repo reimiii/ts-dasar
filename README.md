@@ -3,6 +3,9 @@ setup this for node
 ```bash
 npm init
 
+# after init add "type": "module" in package.json
+#
+
 npm install --save-dev jest @types/jest
 
 npm install --save-dev babel-jest @babel/preset-env
