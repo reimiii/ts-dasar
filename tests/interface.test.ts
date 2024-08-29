@@ -52,18 +52,18 @@ describe('Interface', () => {
     });
 
     it('should support extends interface', () => {
-       const emply: Employee = {
-           id: "123",
-           name: "rahmat",
-           division: "Slamet"
-       };
+        const emply: Employee = {
+            id: "123",
+            name: "rahmat",
+            division: "Slamet"
+        };
 
-       const managr: Manager = {
-           id: "111",
-           name: "Haannd",
-           division: "IT",
-           numOfEmployees: 11100
-       };
+        const managr: Manager = {
+            id: "111",
+            name: "Haannd",
+            division: "IT",
+            numOfEmployees: 11100
+        };
 
         console.info(emply);
         console.info(managr);
@@ -72,6 +72,7 @@ describe('Interface', () => {
     it('should support function in interface', () => {
         interface Person {
             name: string;
+
             sayHello(name: string): string;
         }
 
@@ -83,5 +84,29 @@ describe('Interface', () => {
         };
 
         console.info(per.sayHello("Ak"))
+    });
+
+    it('should support intersection type', () => {
+        interface HasName {
+            name: string;
+        }
+
+        interface HasId {
+            id: string;
+        }
+
+        // bisa gini
+        interface Domain extends HasName, HasId {
+        }
+
+        // atau bisa aja gini intersection type
+        type DomainV2 = HasId & HasName;
+
+        const dom: DomainV2 = {
+            id: "112",
+            name: "www"
+        };
+
+        console.info(dom.id)
     });
 });
