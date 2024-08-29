@@ -51,7 +51,8 @@ npx jest
 
 compile typescript
 
-create `dist` folder in root project dir and uncomment and change `"outDir": "./"` to `"outDir": "dist/"` and compile with
+create `dist`, `src` and `tests` folder in root project dir and uncomment and
+change `"outDir": "./"` to `"outDir": "dist/"` in `tsconfig.json` and compile with
 
 ```shell
 npx tsc
