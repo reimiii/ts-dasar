@@ -15,4 +15,13 @@ describe('Loop', () => {
             console.info(names[namesKey])
         }
     });
+
+    it('should while loop', () => {
+        let i: number = 0;
+
+        while (i < 5) {
+            console.info(i);
+            i++;
+        }
+    });
 });
