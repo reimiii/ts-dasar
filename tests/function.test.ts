@@ -65,4 +65,26 @@ describe('Function', () => {
         expect(callMe("hhh")).toBe("HHH");
         expect(callMe(10)).toBe(20);
     });
+
+    it('should support function as param', () => {
+        function sayMe(name: string, filter: (v: string) => string) {
+            return `say my name.. ${filter(name)}`;
+        }
+
+        function toUp(v: string): string {
+            return v.toUpperCase();
+        }
+
+        expect(sayMe("white", toUp)).toBe("say my name.. WHITE");
+
+        expect(sayMe("white", (v: string): string => v.toUpperCase()))
+            .toBe("say my name.. WHITE");
+
+        expect(sayMe("white", v => v.toUpperCase()))
+            .toBe("say my name.. WHITE");
+
+        expect(sayMe("white", function (v: string): string {
+            return v.toUpperCase();
+        })).toBe("say my name.. WHITE");
+    });
 });
