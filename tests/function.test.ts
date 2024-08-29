@@ -50,4 +50,19 @@ describe('Function', () => {
 
 
     });
+
+    it('should support function overloading', () => {
+        function callMe(v: number): number;
+        function callMe(v: string): string;
+        function callMe(v: any): any {
+            if (typeof v === "string") {
+                return v.toUpperCase();
+            } else if (typeof v === "number") {
+                return v + 10;
+            }
+        }
+
+        expect(callMe("hhh")).toBe("HHH");
+        expect(callMe(10)).toBe(20);
+    });
 });
