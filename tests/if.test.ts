@@ -8,4 +8,11 @@ describe('If Statement', () => {
             console.info("meh");
         }
     });
+
+    it('should ternary operator', () => {
+        const n: number = 100;
+
+        const say: string = (n >= 70) ? "congrats" : "try again";
+        console.info(say)
+    });
 });
