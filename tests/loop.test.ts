@@ -24,4 +24,31 @@ describe('Loop', () => {
             i++;
         }
     });
+
+    it('should do while loop', () => {
+        let i: number = 0;
+
+        do {
+            console.log(i);
+            i++;
+        } while (i < 5);
+
+    });
+
+    it('should break and continue', () => {
+        let counter: number = 0;
+        do {
+            counter++;
+
+            if (counter == 10) {
+                break;
+            }
+
+            if (counter % 2 == 0) {
+                continue;
+            }
+
+            console.info(counter);
+        } while (true);
+    });
 });
